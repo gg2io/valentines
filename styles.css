@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #ffc3d5 0%, #ffb3c6 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 30px;
+    padding: 60px 40px;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.bear {
+    font-size: 120px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.bear::after {
+    content: '❤️';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 40px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+.buttons-container {
+    position: relative;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+button {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, font-size 0.3s, padding 0.3s;
+    font-family: inherit;
+}
+
+#yesBtn {
+    background: #e31b54;
+    color: white;
+    box-shadow: 0 8px 25px rgba(227, 27, 84, 0.4);
+}
+
+#yesBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(227, 27, 84, 0.5);
+}
+
+#yesBtn:active {
+    transform: scale(0.98);
+}
+
+#noBtn {
+    background: #f0f0f0;
+    color: #333;
+    position: absolute;
+    transition: none;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.note {
+    margin-top: 30px;
+    color: #666;
+    font-size: 14px;
+}
+
+.celebration {
+    display: none;
+    font-size: 60px;
+    margin-top: 30px;
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.hidden {
+    display: none !important;
+}
